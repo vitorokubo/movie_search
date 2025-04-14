@@ -56,7 +56,7 @@ class _MainNavigationState extends State<MainNavigation> {
               Icon(Icons.movie_creation, size: 28, color: Colors.white),
               const SizedBox(width: 8),
               Text(
-                'Encontre os filmes que você ama!',
+                'Busca Filme',
                 style: TextStyle(
                   fontFamily: 'Roboto',
                   fontSize: 22,
