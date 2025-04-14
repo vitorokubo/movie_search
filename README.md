@@ -1,31 +1,33 @@
+
 # Movie Search
 
-O projeto consiste um aplicativo de Android onde você pode buscar pela informação de filmes através da integração da [OMDb API](https://www.omdbapi.com/). O projeto foi criado como requerimento para um processo seletivo.
+O projeto consiste em um aplicativo Android onde você pode buscar informações sobre filmes através da integração com a [OMDb API](https://www.omdbapi.com/). O projeto foi criado como requerimento para um processo seletivo.
 
 # Como rodar a aplicação
 
-Para isso são necessários:
-  
-- SDK do Android
-- SDK do Flutter
-- Aparelho Android em modo desenvolvedor. (Caso queira roda-lo em aparelho.Porem podemos localmente na maquina em versão web)
+Para isso, são necessários:
 
+- SDK do Android  
+- SDK do Flutter  
+- Aparelho Android em modo desenvolvedor (caso queira rodá-lo em um aparelho. Também é possível executá-lo localmente no navegador em versão web).
 
-Para rodar a aplicação será necessário a criação de um arquivo **.env** conforme o exemplo **.env.example** com sua API_KEY fornecida pela [OMDb API](https://www.omdbapi.com/). Para a equipe de seleção estárei enviando por e-mail por segurança.
+Para rodar a aplicação, será necessário criar um arquivo **.env** conforme o exemplo **.env.example**, com sua `API_KEY` fornecida pela [OMDb API](https://www.omdbapi.com/).  
+A chave será enviada por e-mail à equipe de seleção por segurança.
 
+Após adicionar o arquivo `.env`, rode o comando no terminal:
 
-
-Após adicionar um arquivo .env rode o comando no terminal:
-```
-- flutter run
+```bash
+flutter run
 ```
 
 # Sobre o projeto
 
-  O projeto foi criado seguindo os requisitos exigidos pelo como utilização das bibliotecas Dio, Bloc e shared_preferences, e separação do projeto em camadas. Foram seguidas boas práticas como princípios de clean code, separação de responsabilidades, onde o lógica de negócio foi separada da UI com o Bloc. Foi atingido um aplicativo simples mas eficaz para busca de filmes e uma UI organizada e responsiva.
+O projeto foi criado seguindo os requisitos exigidos, como a utilização das bibliotecas `Dio`, `Bloc` e `shared_preferences`, além da separação do projeto em camadas.  
+Foram seguidas boas práticas como os princípios de *clean code* e separação de responsabilidades, em que a lógica de negócio foi isolada da interface de usuário utilizando o Bloc.
 
+O resultado é um aplicativo simples, porém eficaz, para busca de filmes, com uma interface organizada e responsiva.
 
-## Requisitos Cumpridos
+## ✅ Requisitos Cumpridos
 
 ### Funcionalidades
 
@@ -50,24 +52,21 @@ Após adicionar um arquivo .env rode o comando no terminal:
 - [x] Persistência local com `shared_preferences` ou similar
 - [x] Responsividade básica
 
-## Resultados Alcançados 
+## 🧪 Resultados Alcançados 
 
-Tela inicial
+### Tela inicial  
+<img src="./images/tela.png" />
 
-  <img src="./images/tela.png"  />
+### Após buscar filme  
+<img src="./images/tela1.png" />
 
-Após buscar filme
+### Detalhes do filme  
+<img src="./images/tela2.png" />
 
-  <img src="./images/tela1.png"  />
+### Aba de recentes mostrando os últimos 5 filmes buscados  
+<img src="./images/tela3.png" />
 
-Detalhes do filme
-
-  <img src="./images/tela2.png"  />
-
-Aba de recentes mostrando os ultimos 5 filmes vistos
-  <img src="./images/tela3.png"  />
-
-## Organização das pastas
+## 🗂 Organização das pastas
 
 ```
 lib/
@@ -85,10 +84,10 @@ lib/
 test/                             # Testes automatizados
 ```
 
-## Ideias de para implementar
+## 💡 Ideias para implementar
 
+- Integração com Firebase para criação de contas e autenticação.  
+- Uso de uma biblioteca específica para injeção de dependência.  
+- Opção de marcar filmes como favoritos com salvamento local.  
+- Aba dedicada para exibir os filmes favoritos.
 
-- Integrar com firebase para criação de contas e autenticação.
-- Integrar biblioteca específica para DI.
-- Opção de favoritos com salvamento.
-- Aba de favoritos.
