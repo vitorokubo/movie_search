@@ -53,7 +53,6 @@ class _PreviousSearchPageState extends State<PreviousSearchPage> {
                 return MovieCard(
                   movie: movie,
                   movieService: widget.movieService,
-                  showDetailsButton: false,
                 );
               },
             );

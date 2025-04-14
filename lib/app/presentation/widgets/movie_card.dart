@@ -11,14 +11,8 @@ import 'package:movie_search/app/presentation/widgets/movie_detail_dialog.dart';
 class MovieCard extends StatelessWidget {
   final MovieModel movie;
   final MovieService movieService;
-  final bool showDetailsButton;
 
-  const MovieCard({
-    super.key,
-    required this.movie,
-    required this.movieService,
-    this.showDetailsButton = true,
-  });
+  const MovieCard({super.key, required this.movie, required this.movieService});
 
   Future<void> _handleVerDetalhes(BuildContext context) async {
     try {
@@ -86,7 +80,7 @@ class MovieCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF543A14), 
+                      color: Color(0xFF543A14),
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -102,22 +96,21 @@ class MovieCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
 
-                  if (showDetailsButton)
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFFF0BB78),
-                          foregroundColor: Color(0xFF131010),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          padding: const EdgeInsets.symmetric(vertical: 10),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFF0BB78),
+                        foregroundColor: Color(0xFF131010),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        onPressed: () => _handleVerDetalhes(context),
-                        child: const Text('Ver detalhes'),
+                        padding: const EdgeInsets.symmetric(vertical: 10),
                       ),
+                      onPressed: () => _handleVerDetalhes(context),
+                      child: const Text('Ver detalhes'),
                     ),
+                  ),
                 ],
               ),
             ),

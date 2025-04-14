@@ -41,6 +41,7 @@ class MovieModel {
     return {
       'Title': title,
       'Year': year,
+      'imdbID': imdbID,
       'Poster': poster,
       'Genre': genre,
       'Plot': plot,
