@@ -1,93 +1,92 @@
 
 # Movie Search
 
-O projeto consiste em um aplicativo Android onde você pode buscar informações sobre filmes através da integração com a [OMDb API](https://www.omdbapi.com/). O projeto foi criado como requerimento para um processo seletivo.
+This project is an Android application where you can search for movie information through integration with the [OMDb API](https://www.omdbapi.com/). The project was created as part of a selection process requirement.
 
-# Como rodar a aplicação
+## How to Run the Application
 
-Para isso, são necessários:
+You will need:
 
-- SDK do Android  
-- SDK do Flutter  
-- Aparelho Android em modo desenvolvedor (caso queira rodá-lo em um aparelho. Também é possível executá-lo localmente no navegador em versão web).
+- Android SDK  
+- Flutter SDK  
+- An Android device in developer mode (if you want to run it on a physical device. You can also run it locally in the browser in a web version).
 
-Para rodar a aplicação, será necessário criar um arquivo **.env** conforme o exemplo **.env.example**, com sua `API_KEY` fornecida pela [OMDb API](https://www.omdbapi.com/).  
-A chave será enviada por e-mail à equipe de seleção por segurança.
+To run the app, you’ll need to create a **.env** file based on the provided **.env.example**, including your `API_KEY` from the [OMDb API](https://www.omdbapi.com/).  
+The API key will be sent to the selection team via email for security purposes.
 
-Após adicionar o arquivo `.env`, rode o comando no terminal:
+Once the `.env` file is added, run the following command in your terminal:
 
 ```bash
 flutter run
 ```
 
-# Sobre o projeto
+## About the Project
 
-O projeto foi criado seguindo os requisitos exigidos, como a utilização das bibliotecas `Dio`, `Bloc` e `shared_preferences`, além da separação do projeto em camadas.  
-Foram seguidas boas práticas como os princípios de *clean code* e separação de responsabilidades, em que a lógica de negócio foi isolada da interface de usuário utilizando o Bloc.
+The project was created following the specified requirements, such as the use of `Dio`, `Bloc`, and `shared_preferences` libraries, and a layered architecture.  
+Best practices like *clean code* principles and separation of concerns were followed, where business logic is isolated from the UI using Bloc.
 
-O resultado é um aplicativo simples, porém eficaz, para busca de filmes, com uma interface organizada e responsiva.
+The result is a simple yet effective movie search app, with a clean and responsive interface.
 
-## ✅ Requisitos Cumpridos
+## ✅ Requirements Met
 
-### Funcionalidades
+### Features
 
-- [x] Tela de busca de filmes (campo de texto + botão de buscar)
-- [x] Exibição dos resultados em uma lista com:
-  - [x] Título
-  - [x] Pôster
-  - [x] Ano de lançamento
-- [x] Tela de detalhes do filme com:
-  - [x] Título
-  - [x] Pôster em maior destaque
-  - [x] Ano, gênero, sinopse
-- [x] Armazenar localmente os últimos 5 filmes buscados
-- [x] Exibir os últimos 5 filmes na aba "Recentes"
+- [x] Movie search screen (text input + search button)
+- [x] Display results in a list with:
+  - [x] Title
+  - [x] Poster
+  - [x] Release year
+- [x] Movie details screen with:
+  - [x] Title
+  - [x] Highlighted poster
+  - [x] Year, genre, synopsis
+- [x] Locally store the last 5 searched movies
+- [x] Display the last 5 movies in the "Recent" tab
 
-### Requisitos Técnicos
+### Technical Requirements
 
 - [x] Flutter + Dart
-- [x] Uso do `dio` para requisições
-- [x] Gerência de estado com `Bloc`
-- [x] Separação por camadas (mínimo: `data`, `domain`, `presentation`)
-- [x] Persistência local com `shared_preferences` ou similar
-- [x] Responsividade básica
+- [x] Use of `dio` for HTTP requests
+- [x] State management with `Bloc`
+- [x] Layered architecture (minimum: `data`, `domain`, `presentation`)
+- [x] Local persistence with `shared_preferences` or similar
+- [x] Basic responsiveness
 
-## 🧪 Resultados Alcançados 
+## 🧪 Achieved Results
 
-### Tela inicial  
+### Home screen  
 <img src="./images/tela.png" />
 
-### Após buscar filme  
+### After searching for a movie  
 <img src="./images/tela1.png" />
 
-### Detalhes do filme  
+### Movie details  
 <img src="./images/tela2.png" />
 
-### Aba de recentes mostrando os últimos 5 filmes buscados  
+### "Recent" tab showing the last 5 searched movies  
 <img src="./images/tela3.png" />
 
-## 🗂 Organização das pastas
+## 🗂 Folder Structure
 
 ```
 lib/
-├── app/                          # Camada de regras de negócio e contratos
-│   ├── data/                     # Lógica de aplicação e serviços
-│   │   ├── models                # Models
-│   │   ├── repositories          # Interfaces de repositórios (acesso a dados)
-│   ├── domain/                   # Lógica de domínio da aplicação
-│   │   ├── bloc                  # Entidades de domínio (conceitos de negócio)
-│   │   ├── services/             # Regras de negócio
-│   ├── presentation/             # Camada de apresentação (UI)
-│   │   ├── screens               # Telas da aplicação
-│   │   ├── theme                 # Configurações de tema (cores, fontes)
-│   │   ├── widgets               # Componentes reutilizáveis de UI
-test/                             # Testes automatizados
+├── app/                          # Business rules and contracts layer
+│   ├── data/                     # Application logic and services
+│   │   ├── models                # Data models
+│   │   ├── repositories          # Repository interfaces (data access)
+│   ├── domain/                   # Application domain logic
+│   │   ├── bloc                  # Domain entities (business concepts)
+│   │   ├── services/             # Business rules
+│   ├── presentation/             # Presentation layer (UI)
+│   │   ├── screens               # App screens
+│   │   ├── theme                 # Theme configuration (colors, fonts)
+│   │   ├── widgets               # Reusable UI components
+test/                             # Automated tests
 ```
 
-## 💡 Ideias para implementar
+## 💡 Future Ideas
 
-- Integração com Firebase para criação de contas e autenticação.  
-- Uso de uma biblioteca específica para injeção de dependência.  
-- Opção de marcar filmes como favoritos com salvamento local.  
-- Aba dedicada para exibir os filmes favoritos.
-
+- Integrate with Firebase for account creation and authentication.  
+- Use a dedicated dependency injection library.  
+- Add the ability to mark movies as favorites and store them locally.  
+- Create a dedicated tab to show favorite movies.
